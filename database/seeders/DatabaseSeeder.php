@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Game;
 use App\Models\User;
+use Database\Factories\GameFactory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        Game::factory()->count(1)->create();
     }
 }
